@@ -1,0 +1,26 @@
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Auditor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @individuals.each do |individual| %>
+      <tr>
+        <td><%= individual["name"] %></td>
+        <td><%= individual["age"] %></td>
+        <td><%= individual["gender"] %></td>
+        <td><%= individual["email"] %></td>
+        <td><%= individual["address"] %></td>
+        <td><%= individual["city"] %></td>
+        <td><%= individual["auditor"] ? "Yes" : "No" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
